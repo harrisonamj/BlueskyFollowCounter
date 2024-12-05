@@ -51,7 +51,7 @@ This AWS Lambda function fetches the daily follower count of a specified Bluesky
    - Open the [Amazon EventBridge Console](https://console.aws.amazon.com/events/).
    - Create a new rule with the following cron expression for 23:30 UTC:
      ```
-     30 23 * * ? *
+     crom(30 23 * * ? *)
      ```
    - Add the Lambda function as the target and save the rule.
 
