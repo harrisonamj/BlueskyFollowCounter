@@ -3,13 +3,14 @@ import requests
 import datetime
 import base64
 
-# GitHub settings
+# Settings
 GITHUB_TOKEN = "your_github_personal_access_token"
 GITHUB_REPO = "your_github_username/your_repo_name"
 GITHUB_FILE_PATH = "path/to/follower_count_log.csv"
 GITHUB_BRANCH = "main"  # Replace with your branch name
+BLUESKY_HANDLE = "harrisonamj.com" # Replace with your handle
 
-API_URL = "https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor=harrisonamj.com"
+API_URL = f"https://public.api.bsky.app/xrpc/app.bsky.actor.getProfile?actor={BLUESKY_HANDLE}"
 
 def lambda_handler(event, context):
     try:
